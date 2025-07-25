@@ -4,12 +4,20 @@
   "description": "Universal service health monitoring MCP server for checking APIs, databases, and services",
   "main": "dist/server.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natashanajdovski/service-health-mcp.git"
+  },
+  "homepage": "https://github.com/natashanajdovski/service-health-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/natashanajdovski/service-health-mcp/issues"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/server.ts",
     "start": "node dist/server.js",
     "test": "echo 'Tests coming soon!' && exit 0",
-    "clean": "rm -rf dist"
+    "clean": "rmdir /s /q dist 2>nul || echo No dist folder to clean"
   },
   "keywords": [
     "mcp",
@@ -19,9 +27,11 @@
     "api-monitoring",
     "service-monitoring",
     "claude",
-    "ai-tools"
+    "ai-tools",
+    "typescript",
+    "devops"
   ],
-  "author": "Your Name",
+  "author": "Natasha",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.5.0",
