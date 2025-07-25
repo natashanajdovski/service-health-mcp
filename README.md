@@ -1,5 +1,10 @@
+<div align="center">
+
+<img src="assets/favicon.png" alt="Service Health MCP Server" width="64" height="64">
+
 # Service Health MCP Server
 
+</div>
 > **🚀 The first universal service health monitoring tool for Claude Desktop and MCP-compatible AI assistants**
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
