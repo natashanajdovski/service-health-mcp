@@ -1,920 +1,459 @@
-\# Service Health MCP Server
+# Service Health MCP Server
 
+> **🚀 The first universal service health monitoring tool for Claude Desktop and MCP-compatible AI assistants**
 
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![MCP Compatible](https://img.shields.io/badge/MCP-Compatible-blue?style=for-the-badge)](https://github.com/modelcontextprotocol)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Security](https://img.shields.io/badge/Security-SSRF%20Protected-green?style=for-the-badge)](#-security)
+[![AI Built](https://img.shields.io/badge/Built%20with-Claude%20AI-purple?style=for-the-badge)](#-transparency--learning)
 
-> \*\*🚀 The first universal service health monitoring tool for Claude Desktop and MCP-compatible AI assistants\*\*
-
-
-
-\[!\[TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge\&logo=typescript\&logoColor=white)](https://www.typescriptlang.org/)
-
-\[!\[MCP Compatible](https://img.shields.io/badge/MCP-Compatible-blue?style=for-the-badge)](https://github.com/modelcontextprotocol)
-
-\[!\[MIT License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-\[!\[Security](https://img.shields.io/badge/Security-SSRF%20Protected-green?style=for-the-badge)](#-security)
-
-\[!\[AI Built](https://img.shields.io/badge/Built%20with-Claude%20AI-purple?style=for-the-badge)](#-transparency--learning)
-
-
-
-\*\*A professional-grade MCP server that enables AI assistants to monitor web services, APIs, and HTTP endpoints with enterprise-level security.\*\* Perfect for DevOps, monitoring, and ensuring your services are running smoothly.
-
-
+**A professional-grade MCP server that enables AI assistants to monitor web services, APIs, and HTTP endpoints with enterprise-level security.** Perfect for DevOps, monitoring, and ensuring your services are running smoothly.
 
 ---
 
+## 🎓 **Transparency & Learning**
 
+**🤖 Built with AI Assistance:** This project was created by [Natasha Najdovski](https://github.com/natashanajdovski) in collaboration with Claude Sonnet 4 as a learning exercise. No prior MCP server development experience was required!
 
-\## 🎓 \*\*Transparency \& Learning\*\*
+**📚 Learning Goals Achieved:**
+- ✅ **MCP Protocol Implementation** - From zero to working server
+- ✅ **TypeScript Best Practices** - Professional code structure
+- ✅ **Security-First Development** - Enterprise-grade SSRF protection
+- ✅ **Open Source Standards** - Community-ready documentation
+- ✅ **Real-World Problem Solving** - Filling a genuine gap in the MCP ecosystem
 
-
-
-\*\*🤖 Built with AI Assistance:\*\* This project was created by \[Natasha Najdovski](https://github.com/natashanajdovski) in collaboration with Claude Sonnet 4 as a learning exercise. No prior MCP server development experience was required!
-
-
-
-\*\*📚 Learning Goals Achieved:\*\*
-
-\- ✅ \*\*MCP Protocol Implementation\*\* - From zero to working server
-
-\- ✅ \*\*TypeScript Best Practices\*\* - Professional code structure
-
-\- ✅ \*\*Security-First Development\*\* - Enterprise-grade SSRF protection
-
-\- ✅ \*\*Open Source Standards\*\* - Community-ready documentation
-
-\- ✅ \*\*Real-World Problem Solving\*\* - Filling a genuine gap in the MCP ecosystem
-
-
-
-\*\*💡 For Fellow Learners:\*\* If you're new to MCP development or curious about AI-assisted programming, this project demonstrates what's possible when learning with AI guidance. Check out our \[Learning Journey](docs/LEARNING.md) for insights!
-
-
+**💡 For Fellow Learners:** If you're new to MCP development or curious about AI-assisted programming, this project demonstrates what's possible when learning with AI guidance. Check out our [Learning Journey](docs/LEARNING.md) for insights!
 
 ---
 
+## ✨ **Why This Exists**
 
+**The Problem:** AI assistants had no reliable way to check if web services were actually working. Existing tools were complex, enterprise-only, or didn't integrate with AI workflows.
 
-\## ✨ \*\*Why This Exists\*\*
+**The Solution:** A simple, secure MCP server that lets Claude (and other AI assistants) monitor service health naturally through conversation.
 
-
-
-\*\*The Problem:\*\* AI assistants had no reliable way to check if web services were actually working. Existing tools were complex, enterprise-only, or didn't integrate with AI workflows.
-
-
-
-\*\*The Solution:\*\* A simple, secure MCP server that lets Claude (and other AI assistants) monitor service health naturally through conversation.
-
-
-
-\*\*What Makes It Special:\*\*
-
-\- 🔍 \*\*First of its kind\*\* for the MCP ecosystem
-
-\- 🛡️ \*\*Security-first design\*\* with comprehensive SSRF protection
-
-\- ⚡ \*\*Lightning fast\*\* with sub-second response times
-
-\- 🎯 \*\*Zero configuration\*\* - works out of the box
-
-\- 📊 \*\*Professional output\*\* with detailed diagnostics
-
-
+**What Makes It Special:**
+- 🔍 **First of its kind** for the MCP ecosystem
+- 🛡️ **Security-first design** with comprehensive SSRF protection
+- ⚡ **Lightning fast** with sub-second response times
+- 🎯 **Zero configuration** - works out of the box
+- 📊 **Professional output** with detailed diagnostics
 
 ---
 
+## 🚀 **Quick Start**
 
-
-\## 🚀 \*\*Quick Start\*\*
-
-
-
-\### \*\*Step 1: Install\*\*
-
+### **Step 1: Install**
 ```bash
-
 git clone https://github.com/natashanajdovski/service-health-mcp.git
-
 cd service-health-mcp
-
 npm install
-
 npm run build
-
 ```
 
+### **Step 2: Configure Claude Desktop**
 
+**Find your config file:**
+- **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+- **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`  
+- **Linux:** `~/.config/Claude/claude_desktop_config.json`
 
-\### \*\*Step 2: Configure Claude Desktop\*\*
-
-
-
-\*\*Find your config file:\*\*
-
-\- \*\*Windows:\*\* `%APPDATA%\\Claude\\claude\_desktop\_config.json`
-
-\- \*\*macOS:\*\* `~/Library/Application Support/Claude/claude\_desktop\_config.json`  
-
-\- \*\*Linux:\*\* `~/.config/Claude/claude\_desktop\_config.json`
-
-
-
-\*\*Add this configuration:\*\*
-
+**Add this configuration:**
 ```json
-
 {
-
-&nbsp; "mcpServers": {
-
-&nbsp;   "service-health": {
-
-&nbsp;     "command": "node",
-
-&nbsp;     "args": \["C:\\\\path\\\\to\\\\service-health-mcp\\\\dist\\\\server.js"],
-
-&nbsp;     "cwd": "C:\\\\path\\\\to\\\\service-health-mcp"
-
-&nbsp;   }
-
-&nbsp; }
-
+  "mcpServers": {
+    "service-health": {
+      "command": "node",
+      "args": ["C:\\path\\to\\service-health-mcp\\dist\\server.js"],
+      "cwd": "C:\\path\\to\\service-health-mcp"
+    }
+  }
 }
-
 ```
 
-
-
-\### \*\*Step 3: Restart \& Test\*\*
-
-1\. \*\*Completely close and reopen Claude Desktop\*\*
-
-2\. \*\*Test with:\*\* `"Check if google.com is healthy"`
-
-3\. \*\*See professional health reports instantly! 🎉\*\*
-
-
+### **Step 3: Restart & Test**
+1. **Completely close and reopen Claude Desktop**
+2. **Test with:** `"Check if google.com is healthy"`
+3. **See professional health reports instantly! 🎉**
 
 ---
 
+## 🎯 **Usage Examples**
 
-
-\## 🎯 \*\*Usage Examples\*\*
-
-
-
-\### \*\*Basic Health Monitoring\*\*
-
+### **Basic Health Monitoring**
 ```
-
 📝 "Check if google.com is healthy"
-
 📝 "Is api.github.com responding properly?"
-
 📝 "Test if my-website.com is up"
-
 ```
 
-
-
-\### \*\*Advanced Configurations\*\*
-
+### **Advanced Configurations**
 ```
-
 📝 "Check if api.example.com/health is healthy with a 15 second timeout"
-
 📝 "Test httpbin.org/post using POST method"
-
 📝 "Check if my-api.com returns 201 status code"
-
 ```
 
-
-
-\### \*\*DevOps \& Monitoring\*\*
-
+### **DevOps & Monitoring**
 ```
-
 📝 "Check if our production API is responding normally"
-
 📝 "Test all our microservices for health"
-
 📝 "Monitor our CDN endpoints"
-
 ```
-
-
 
 ---
 
-
-
-\## 📊 \*\*Sample Output\*\*
-
-
+## 📊 **Sample Output**
 
 ```
+✅ **Health Check Result**
 
-✅ \*\*Health Check Result\*\*
+**URL:** https://api.github.com
+**Status:** HEALTHY
+**Response Time:** 127ms  
+**HTTP Status:** 200 (OK)
+**Message:** Endpoint is healthy (200) - 127ms response time
+**Checked At:** 2024-07-24T21:30:00.000Z
 
-
-
-\*\*URL:\*\* https://api.github.com
-
-\*\*Status:\*\* HEALTHY
-
-\*\*Response Time:\*\* 127ms  
-
-\*\*HTTP Status:\*\* 200 (OK)
-
-\*\*Message:\*\* Endpoint is healthy (200) - 127ms response time
-
-\*\*Checked At:\*\* 2024-07-24T21:30:00.000Z
-
-
-
-\*\*Interpretation:\*\*
-
+**Interpretation:**
 🎉 The endpoint is working perfectly! No issues detected.
-
 ```
 
-
-
-\*\*For unhealthy services:\*\*
-
+**For unhealthy services:**
 ```
+❌ **Health Check Result**
 
-❌ \*\*Health Check Result\*\*
+**URL:** https://down-service.com
+**Status:** UNHEALTHY
+**Response Time:** 5000ms
+**Message:** Network error: Connection timeout
+**Checked At:** 2024-07-24T21:30:00.000Z
 
-
-
-\*\*URL:\*\* https://down-service.com
-
-\*\*Status:\*\* UNHEALTHY
-
-\*\*Response Time:\*\* 5000ms
-
-\*\*Message:\*\* Network error: Connection timeout
-
-\*\*Checked At:\*\* 2024-07-24T21:30:00.000Z
-
-
-
-\*\*Interpretation:\*\*
-
+**Interpretation:**
 🚨 The endpoint has issues and may be down or misconfigured. Investigation needed.
-
 ```
-
-
 
 ---
 
-
-
-\## 🛠️ \*\*Features\*\*
-
-
+## 🛠️ **Features**
 
 <table>
-
 <tr>
-
 <td width="50%">
 
-
-
-\### \*\*🔍 Health Monitoring\*\*
-
-\- ✅ HTTP/HTTPS endpoint testing
-
-\- ✅ Response time measurement  
-
-\- ✅ Status code validation
-
-\- ✅ Custom headers support
-
-\- ✅ Multiple HTTP methods
-
-\- ✅ Configurable timeouts (1-30s)
-
-
+### **🔍 Health Monitoring**
+- ✅ HTTP/HTTPS endpoint testing
+- ✅ Response time measurement  
+- ✅ Status code validation
+- ✅ Custom headers support
+- ✅ Multiple HTTP methods
+- ✅ Configurable timeouts (1-30s)
 
 </td>
-
 <td width="50%">
 
-
-
-\### \*\*🛡️ Enterprise Security\*\*
-
-\- ✅ SSRF attack prevention
-
-\- ✅ Internal network blocking
-
-\- ✅ Input validation \& sanitization
-
-\- ✅ Protocol restrictions (HTTP/HTTPS only)
-
-\- ✅ Port filtering \& safe defaults
-
-\- ✅ Zero credential exposure
-
-
+### **🛡️ Enterprise Security**
+- ✅ SSRF attack prevention
+- ✅ Internal network blocking
+- ✅ Input validation & sanitization
+- ✅ Protocol restrictions (HTTP/HTTPS only)
+- ✅ Port filtering & safe defaults
+- ✅ Zero credential exposure
 
 </td>
-
 </tr>
-
 <tr>
-
 <td width="50%">
 
-
-
-\### \*\*⚡ Performance\*\*
-
-\- ✅ Sub-second response times
-
-\- ✅ Efficient connection handling
-
-\- ✅ Minimal resource usage
-
-\- ✅ Non-blocking async operations
-
-\- ✅ Optimized error handling
-
-\- ✅ Smart retry logic
-
-
+### **⚡ Performance**
+- ✅ Sub-second response times
+- ✅ Efficient connection handling
+- ✅ Minimal resource usage
+- ✅ Non-blocking async operations
+- ✅ Optimized error handling
+- ✅ Smart retry logic
 
 </td>
-
 <td width="50%">
 
-
-
-\### \*\*🔧 Developer Experience\*\*
-
-\- ✅ Full TypeScript support
-
-\- ✅ Professional error messages
-
-\- ✅ Comprehensive logging
-
-\- ✅ Easy MCP integration
-
-\- ✅ Hot reload development
-
-\- ✅ Extensive documentation
-
-
+### **🔧 Developer Experience**
+- ✅ Full TypeScript support
+- ✅ Professional error messages
+- ✅ Comprehensive logging
+- ✅ Easy MCP integration
+- ✅ Hot reload development
+- ✅ Extensive documentation
 
 </td>
-
 </tr>
-
 </table>
 
-
-
 ---
 
+## 🛡️ **Security**
 
+**This MCP server implements enterprise-grade security to prevent attacks:**
 
-\## 🛡️ \*\*Security\*\*
-
-
-
-\*\*This MCP server implements enterprise-grade security to prevent attacks:\*\*
-
-
-
-\### \*\*🚨 SSRF (Server-Side Request Forgery) Protection\*\*
-
+### **🚨 SSRF (Server-Side Request Forgery) Protection**
 ```
-
 ❌ BLOCKED: localhost, 127.0.0.1
-
 ❌ BLOCKED: 192.168.x.x, 10.x.x.x, 172.16-31.x.x  
-
 ❌ BLOCKED: 169.254.169.254 (cloud metadata)
-
 ❌ BLOCKED: Non-HTTP protocols (ftp, file, etc.)
-
 ✅ ALLOWED: Public HTTP/HTTPS endpoints only
-
 ```
 
+### **🔒 Input Validation**
+- **URL Format:** RFC-compliant validation
+- **Parameter Types:** Strict type checking with Zod
+- **Timeout Bounds:** 1-30 second limits
+- **Method Restrictions:** GET, POST, PUT, DELETE only
+- **Port Filtering:** Standard web ports (80, 443, 8080, 8443)
 
-
-\### \*\*🔒 Input Validation\*\*
-
-\- \*\*URL Format:\*\* RFC-compliant validation
-
-\- \*\*Parameter Types:\*\* Strict type checking with Zod
-
-\- \*\*Timeout Bounds:\*\* 1-30 second limits
-
-\- \*\*Method Restrictions:\*\* GET, POST, PUT, DELETE only
-
-\- \*\*Port Filtering:\*\* Standard web ports (80, 443, 8080, 8443)
-
-
-
-\### \*\*🛡️ Safe Defaults\*\*
-
-\- \*\*10-second timeout\*\* (prevents hanging)
-
-\- \*\*GET method\*\* (least intrusive)
-
-\- \*\*No credential storage\*\* (stateless operation)
-
-\- \*\*Minimal error details\*\* (no information leakage)
-
-
+### **🛡️ Safe Defaults**
+- **10-second timeout** (prevents hanging)
+- **GET method** (least intrusive)
+- **No credential storage** (stateless operation)
+- **Minimal error details** (no information leakage)
 
 ---
 
+## 🔧 **Development**
 
+### **Prerequisites**
+- **Node.js 18+** 
+- **TypeScript 5+**
+- **npm or yarn**
 
-\## 🔧 \*\*Development\*\*
-
-
-
-\### \*\*Prerequisites\*\*
-
-\- \*\*Node.js 18+\*\* 
-
-\- \*\*TypeScript 5+\*\*
-
-\- \*\*npm or yarn\*\*
-
-
-
-\### \*\*Development Commands\*\*
-
+### **Development Commands**
 ```bash
-
 npm run dev    # 🔄 Hot reload development
-
 npm run build  # 🏗️ Production build  
-
 npm run start  # 🚀 Run built version
-
 npm run clean  # 🧹 Clean build files
-
 ```
 
-
-
-\### \*\*Testing with MCP Inspector\*\*
-
+### **Testing with MCP Inspector**
 ```bash
-
 npx @modelcontextprotocol/inspector src/server.ts
-
 ```
 
-
-
-\### \*\*Project Structure\*\*
-
+### **Project Structure**
 ```
-
 service-health-mcp/
-
 ├── src/
-
 │   ├── server.ts           # 🎯 Main MCP server
-
 │   ├── health/
-
 │   │   └── http-checker.ts # 🔍 Core health logic  
-
 │   ├── security/
-
 │   │   └── url-validator.ts # 🛡️ SSRF protection
-
 │   └── tools/
-
 │       └── check-http.ts   # 🛠️ MCP tool interface
-
 ├── dist/                   # 📦 Compiled JavaScript
-
 ├── docs/                   # 📚 Documentation
-
 └── package.json           # 📋 Project config
-
 ```
-
-
 
 ---
 
+## 📚 **API Reference**
 
+### **`check_http_endpoint`**
 
-\## 📚 \*\*API Reference\*\*
+**Description:** Check if an HTTP/HTTPS endpoint is healthy and responsive.
 
-
-
-\### \*\*`check\_http\_endpoint`\*\*
-
-
-
-\*\*Description:\*\* Check if an HTTP/HTTPS endpoint is healthy and responsive.
-
-
-
-\#### \*\*Parameters\*\*
-
-
+#### **Parameters**
 
 | Parameter | Type | Required | Default | Description |
-
 |-----------|------|----------|---------|-------------|
-
 | `url` | `string` | ✅ Yes | - | The URL to check (e.g., https://google.com) |
-
-| `method` | `"GET" \\| "POST" \\| "PUT" \\| "DELETE"` | ❌ No | `"GET"` | HTTP method to use |
-
+| `method` | `"GET" \| "POST" \| "PUT" \| "DELETE"` | ❌ No | `"GET"` | HTTP method to use |
 | `timeout` | `number` | ❌ No | `10000` | Request timeout in milliseconds (1000-30000) |
-
 | `expectedStatus` | `number` | ❌ No | `200` | Expected HTTP status code (100-599) |
-
 | `headers` | `Record<string, string>` | ❌ No | `{}` | Optional HTTP headers |
 
-
-
-\#### \*\*Example Request\*\*
-
+#### **Example Request**
 ```json
-
 {
-
-&nbsp; "url": "https://api.example.com/health",
-
-&nbsp; "method": "GET", 
-
-&nbsp; "timeout": 15000,
-
-&nbsp; "expectedStatus": 200,
-
-&nbsp; "headers": {
-
-&nbsp;   "User-Agent": "Health-Checker/1.0",
-
-&nbsp;   "Accept": "application/json"
-
-&nbsp; }
-
+  "url": "https://api.example.com/health",
+  "method": "GET", 
+  "timeout": 15000,
+  "expectedStatus": 200,
+  "headers": {
+    "User-Agent": "Health-Checker/1.0",
+    "Accept": "application/json"
+  }
 }
-
 ```
 
-
-
-\#### \*\*Response Format\*\*
-
+#### **Response Format**
 ```typescript
-
 {
-
-&nbsp; status: "healthy" | "unhealthy" | "warning";
-
-&nbsp; responseTime: number;          // milliseconds
-
-&nbsp; statusCode?: number;           // HTTP status code
-
-&nbsp; message: string;               // Human-readable description
-
-&nbsp; details: {
-
-&nbsp;   url: string;
-
-&nbsp;   timestamp: string;           // ISO 8601 format
-
-&nbsp;   error?: string;              // Error details if applicable
-
-&nbsp; }
-
+  status: "healthy" | "unhealthy" | "warning";
+  responseTime: number;          // milliseconds
+  statusCode?: number;           // HTTP status code
+  message: string;               // Human-readable description
+  details: {
+    url: string;
+    timestamp: string;           // ISO 8601 format
+    error?: string;              // Error details if applicable
+  }
 }
-
 ```
-
-
 
 ---
 
+## 🔄 **Troubleshooting**
 
+### **❓ Tool Not Appearing in Claude Desktop**
 
-\## 🔄 \*\*Troubleshooting\*\*
+**Problem:** Claude doesn't recognize the health check tool.
 
+**Solutions:**
+1. **Verify config syntax:** Use a JSON validator
+2. **Check file paths:** Use absolute paths in config
+3. **Restart completely:** Close Claude Desktop entirely, then reopen
+4. **Test build:** Run `npm run build` and check for errors
+5. **Check permissions:** Ensure Node.js can read the files
 
+### **🌐 Network Connection Issues**
 
-\### \*\*❓ Tool Not Appearing in Claude Desktop\*\*
-
-
-
-\*\*Problem:\*\* Claude doesn't recognize the health check tool.
-
-
-
-\*\*Solutions:\*\*
-
-1\. \*\*Verify config syntax:\*\* Use a JSON validator
-
-2\. \*\*Check file paths:\*\* Use absolute paths in config
-
-3\. \*\*Restart completely:\*\* Close Claude Desktop entirely, then reopen
-
-4\. \*\*Test build:\*\* Run `npm run build` and check for errors
-
-5\. \*\*Check permissions:\*\* Ensure Node.js can read the files
-
-
-
-\### \*\*🌐 Network Connection Issues\*\*
-
-
-
-\*\*Problem:\*\* Getting network errors or timeouts.
-
-
+**Problem:** Getting network errors or timeouts.
 
 ```
-
 ❌ Network error: Client network socket disconnected
-
 ```
 
+**Solutions:**
+- **Service may be down:** Try checking in browser first
+- **HTTPS issues:** Try HTTP version of the URL
+- **Firewall:** Check if your network blocks the service
+- **DNS:** Verify the domain resolves correctly
 
+### **🔒 Security Restriction Messages**
 
-\*\*Solutions:\*\*
-
-\- \*\*Service may be down:\*\* Try checking in browser first
-
-\- \*\*HTTPS issues:\*\* Try HTTP version of the URL
-
-\- \*\*Firewall:\*\* Check if your network blocks the service
-
-\- \*\*DNS:\*\* Verify the domain resolves correctly
-
-
-
-\### \*\*🔒 Security Restriction Messages\*\*
-
-
-
-\*\*Problem:\*\* URLs being blocked for security reasons.
-
-
+**Problem:** URLs being blocked for security reasons.
 
 ```
-
 ❌ Access to internal networks and localhost is not allowed
-
 ```
 
+**This is intentional!** The security system is working correctly:
+- **For local testing:** Use browser or `curl` directly
+- **For monitoring:** Use external, publicly accessible URLs only
+- **For internal services:** Deploy monitoring within your network
 
+### **⚡ Performance Issues**
 
-\*\*This is intentional!\*\* The security system is working correctly:
+**Problem:** Slow response times or timeouts.
 
-\- \*\*For local testing:\*\* Use browser or `curl` directly
-
-\- \*\*For monitoring:\*\* Use external, publicly accessible URLs only
-
-\- \*\*For internal services:\*\* Deploy monitoring within your network
-
-
-
-\### \*\*⚡ Performance Issues\*\*
-
-
-
-\*\*Problem:\*\* Slow response times or timeouts.
-
-
-
-\*\*Solutions:\*\*
-
-\- \*\*Increase timeout:\*\* Use 15-30 second timeouts for slow services
-
-\- \*\*Check network:\*\* Test connectivity to the target service
-
-\- \*\*Reduce load:\*\* Avoid checking too many endpoints simultaneously
-
-
+**Solutions:**
+- **Increase timeout:** Use 15-30 second timeouts for slow services
+- **Check network:** Test connectivity to the target service
+- **Reduce load:** Avoid checking too many endpoints simultaneously
 
 ---
 
+## 🤝 **Contributing**
 
+**We welcome contributors of all skill levels!** This project was built by a learner with AI assistance, and we're excited to grow the community.
 
-\## 🤝 \*\*Contributing\*\*
+### **🌟 Ways to Contribute**
+- **🐛 Bug Reports:** Found an issue? Please report it!
+- **✨ Feature Requests:** Ideas for new capabilities?
+- **📖 Documentation:** Help improve our guides
+- **🔧 Code:** Submit pull requests for enhancements
+- **🎓 Learning:** Share your experience using this project
 
+### **🚀 Getting Started**
+1. **Fork** the repository
+2. **Clone** your fork: `git clone https://github.com/yourusername/service-health-mcp.git`
+3. **Create branch:** `git checkout -b feature/amazing-feature`
+4. **Make changes** and test thoroughly
+5. **Commit:** `git commit -m "Add amazing feature"`
+6. **Push:** `git push origin feature/amazing-feature`  
+7. **Open Pull Request** with detailed description
 
+### **📋 Contribution Guidelines**
+- **Code Style:** Follow existing TypeScript patterns
+- **Security:** Maintain SSRF protection standards
+- **Tests:** Add tests for new features
+- **Documentation:** Update docs for any changes
+- **Commit Messages:** Use clear, descriptive commits
 
-\*\*We welcome contributors of all skill levels!\*\* This project was built by a learner with AI assistance, and we're excited to grow the community.
-
-
-
-\### \*\*🌟 Ways to Contribute\*\*
-
-\- \*\*🐛 Bug Reports:\*\* Found an issue? Please report it!
-
-\- \*\*✨ Feature Requests:\*\* Ideas for new capabilities?
-
-\- \*\*📖 Documentation:\*\* Help improve our guides
-
-\- \*\*🔧 Code:\*\* Submit pull requests for enhancements
-
-\- \*\*🎓 Learning:\*\* Share your experience using this project
-
-
-
-\### \*\*🚀 Getting Started\*\*
-
-1\. \*\*Fork\*\* the repository
-
-2\. \*\*Clone\*\* your fork: `git clone https://github.com/yourusername/service-health-mcp.git`
-
-3\. \*\*Create branch:\*\* `git checkout -b feature/amazing-feature`
-
-4\. \*\*Make changes\*\* and test thoroughly
-
-5\. \*\*Commit:\*\* `git commit -m "Add amazing feature"`
-
-6\. \*\*Push:\*\* `git push origin feature/amazing-feature`  
-
-7\. \*\*Open Pull Request\*\* with detailed description
-
-
-
-\### \*\*📋 Contribution Guidelines\*\*
-
-\- \*\*Code Style:\*\* Follow existing TypeScript patterns
-
-\- \*\*Security:\*\* Maintain SSRF protection standards
-
-\- \*\*Tests:\*\* Add tests for new features
-
-\- \*\*Documentation:\*\* Update docs for any changes
-
-\- \*\*Commit Messages:\*\* Use clear, descriptive commits
-
-
-
-See \[CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
-
-
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ---
 
+## 🗺️ **Roadmap**
 
+### **🎯 Phase 1: Core Stability** *(Current)*
+- ✅ HTTP/HTTPS health checking
+- ✅ Enterprise security (SSRF protection)
+- ✅ Claude Desktop integration
+- ✅ Professional documentation
 
-\## 🗺️ \*\*Roadmap\*\*
+### **🎯 Phase 2: Database Support** *(Next)*
+- 🔄 PostgreSQL health checking
+- 🔄 MySQL/MariaDB support
+- 🔄 Redis connectivity testing
+- 🔄 MongoDB health monitoring
 
+### **🎯 Phase 3: Advanced Features**
+- 📊 Multi-service dashboards
+- 📈 Health history tracking
+- 🔔 Webhook notifications
+- ⏰ Scheduled monitoring
 
+### **🎯 Phase 4: Enterprise**
+- ☁️ Cloud integration (AWS, Azure, GCP)
+- 🐳 Docker containerization
+- 🔐 Authentication support
+- 📊 Prometheus metrics export
 
-\### \*\*🎯 Phase 1: Core Stability\*\* \*(Current)\*
-
-\- ✅ HTTP/HTTPS health checking
-
-\- ✅ Enterprise security (SSRF protection)
-
-\- ✅ Claude Desktop integration
-
-\- ✅ Professional documentation
-
-
-
-\### \*\*🎯 Phase 2: Database Support\*\* \*(Next)\*
-
-\- 🔄 PostgreSQL health checking
-
-\- 🔄 MySQL/MariaDB support
-
-\- 🔄 Redis connectivity testing
-
-\- 🔄 MongoDB health monitoring
-
-
-
-\### \*\*🎯 Phase 3: Advanced Features\*\*
-
-\- 📊 Multi-service dashboards
-
-\- 📈 Health history tracking
-
-\- 🔔 Webhook notifications
-
-\- ⏰ Scheduled monitoring
-
-
-
-\### \*\*🎯 Phase 4: Enterprise\*\*
-
-\- ☁️ Cloud integration (AWS, Azure, GCP)
-
-\- 🐳 Docker containerization
-
-\- 🔐 Authentication support
-
-\- 📊 Prometheus metrics export
-
-
-
-\*\*💡 Community Input Welcome!\*\* Open an issue to suggest features or vote on priorities.
-
-
+**💡 Community Input Welcome!** Open an issue to suggest features or vote on priorities.
 
 ---
 
+## 📜 **License**
 
+**MIT License** - see [LICENSE](LICENSE) file for details.
 
-\## 📜 \*\*License\*\*
-
-
-
-\*\*MIT License\*\* - see \[LICENSE](LICENSE) file for details.
-
-
-
-\*\*TL;DR:\*\* You can use, modify, and distribute this project freely. Just include the license notice.
-
-
+**TL;DR:** You can use, modify, and distribute this project freely. Just include the license notice.
 
 ---
 
+## 🙏 **Acknowledgments**
 
-
-\## 🙏 \*\*Acknowledgments\*\*
-
-
-
-\- \*\*🤖 Anthropic\*\* for Claude AI assistance and the MCP protocol
-
-\- \*\*🏗️ MCP Community\*\* for pioneering this ecosystem  
-
-\- \*\*🌟 Open Source Contributors\*\* who make projects like this possible
-
-\- \*\*📚 Learning Community\*\* for encouraging AI-assisted development
-
-
+- **🤖 Anthropic** for Claude AI assistance and the MCP protocol
+- **🏗️ MCP Community** for pioneering this ecosystem  
+- **🌟 Open Source Contributors** who make projects like this possible
+- **📚 Learning Community** for encouraging AI-assisted development
 
 ---
 
+## 📞 **Support & Community**
 
+### **📚 Documentation**
+- **[Setup Guide](docs/SETUP.md)** - Detailed installation instructions
+- **[Learning Guide](docs/LEARNING.md)** - For developers new to MCP
+- **[API Reference](docs/API.md)** - Complete technical documentation
+- **[Security Guide](docs/SECURITY.md)** - Security considerations and best practices
 
-\## 📞 \*\*Support \& Community\*\*
+### **💬 Get Help**
+- **🐛 [Issues](https://github.com/natashanajdovski/service-health-mcp/issues)** - Bug reports and feature requests
+- **💭 [Discussions](https://github.com/natashanajdovski/service-health-mcp/discussions)** - Community Q&A and ideas
 
-
-
-\### \*\*📚 Documentation\*\*
-
-\- \*\*\[Setup Guide](docs/SETUP.md)\*\* - Detailed installation instructions
-
-\- \*\*\[Learning Guide](docs/LEARNING.md)\*\* - For developers new to MCP
-
-\- \*\*\[API Reference](docs/API.md)\*\* - Complete technical documentation
-
-\- \*\*\[Security Guide](docs/SECURITY.md)\*\* - Security considerations and best practices
-
-
-
-\### \*\*💬 Get Help\*\*
-
-\- \*\*🐛 \[Issues](https://github.com/natashanajdovski/service-health-mcp/issues)\*\* - Bug reports and feature requests
-
-\- \*\*💭 \[Discussions](https://github.com/natashanajdovski/service-health-mcp/discussions)\*\* - Community Q\&A and ideas
-
-
-
-
-
-\### \*\*🔗 Connect\*\*
-
-\- \*\*👩‍💻 \[GitHub Profile](https://github.com/natashanajdovski)\*\* - Follow for updates
-
-
+### **🔗 Connect**
+- **👩‍💻 [GitHub Profile](https://github.com/natashanajdovski)** - Follow for updates
 
 ---
-
-
 
 <div align="center">
 
+**🚀 Built with ❤️, TypeScript, and Claude AI | Making service monitoring accessible to everyone**
 
-
-\*\*🚀 Built with ❤️, TypeScript, and Claude AI | Making service monitoring accessible to everyone\*\*
-
-
-
-⭐ \*\*Star this repo if it helped you!\*\* ⭐
-
-
+⭐ **Star this repo if it helped you!** ⭐
 
 </div>
-
