@@ -14,7 +14,7 @@
 
 ## 🎓 **Transparency & Learning**
 
-**🤖 Built with AI Assistance:** This project was created by [Natasha Najdovski](https://github.com/natashanajdovski) in collaboration with Claude Sonnet 4 as a learning exercise. No prior MCP server development experience was required!
+**🤖 Built with AI Assistance:** This project was created by [Natasha](https://github.com/natashanajdovski) in collaboration with Claude Sonnet 4 as a learning exercise. No prior MCP server development experience was required!
 
 **📚 Learning Goals Achieved:**
 - ✅ **MCP Protocol Implementation** - From zero to working server
@@ -23,22 +23,20 @@
 - ✅ **Open Source Standards** - Community-ready documentation
 - ✅ **Real-World Problem Solving** - Filling a genuine gap in the MCP ecosystem
 
-**💡 For Fellow Learners:** If you're new to MCP development or curious about AI-assisted programming, this project demonstrates what's possible when learning with AI guidance. Check out our [Learning Journey](docs/LEARNING.md) for insights!
+**💡 For Fellow Learners:** If you're new to MCP development or curious about AI-assisted programming, this project demonstrates what's possible when learning with AI guidance. See our [development process](#-development) and [contributing guidelines](CONTRIBUTING.md) for insights!
 
 ---
 
 ## ✨ **Why This Exists**
 
-**The Problem:** AI assistants had no reliable way to check if web services were actually working. Existing tools were complex, enterprise-only, or didn't integrate with AI workflows.
+**The Goal:** While learning MCP development, I wanted to build something that would be genuinely useful for monitoring services through AI conversations. This MCP server provides a convenient way for Claude (and other AI assistants) to check service health naturally through chat.
 
-**The Solution:** A simple, secure MCP server that lets Claude (and other AI assistants) monitor service health naturally through conversation.
-
-**What Makes It Special:**
-- 🔍 **First of its kind** for the MCP ecosystem
+**What Makes It Useful:**
+- 🔍 **Conversational monitoring** - Check services through natural language
 - 🛡️ **Security-first design** with comprehensive SSRF protection
-- ⚡ **Lightning fast** with sub-second response times
-- 🎯 **Zero configuration** - works out of the box
-- 📊 **Professional output** with detailed diagnostics
+- ⚡ **Fast and reliable** with detailed diagnostics
+- 🎯 **Easy to use** - works out of the box with Claude Desktop
+- 📊 **Professional output** with actionable information
 
 ---
 
@@ -436,10 +434,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 ## 📞 **Support & Community**
 
 ### **📚 Documentation**
-- **[Setup Guide](docs/SETUP.md)** - Detailed installation instructions
-- **[Learning Guide](docs/LEARNING.md)** - For developers new to MCP
-- **[API Reference](docs/API.md)** - Complete technical documentation
-- **[Security Guide](docs/SECURITY.md)** - Security considerations and best practices
+- **[Quick Start Guide](#-quick-start)** - Complete installation instructions
+- **[Development Setup](#-development)** - For developers new to MCP
+- **[API Reference](#-api-reference)** - Complete technical documentation
+- **[Security Details](#-security)** - Security considerations and best practices
 
 ### **💬 Get Help**
 - **🐛 [Issues](https://github.com/natashanajdovski/service-health-mcp/issues)** - Bug reports and feature requests
